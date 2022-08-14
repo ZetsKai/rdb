@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#products {
+	@apply grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 md:gap-20 lg:gap-10 lg:grid-cols-3 xl:grid-cols-4;
+}
+
+@layer utilities {
+	.min-h-36 {
+		min-height: 9rem;
+	}
+}
+
+#logo {
+	white-space: nowrap;
+}
+
+.card {
+	@apply flex sm:flex-col sm:items-center min-h-36 shadow-md overflow-hidden;
+}
+
+.card__thumbnail {
+	@apply relative flex basis-32 items-center shrink-0 sm:w-full p-3 sm:p-10 bg-gray-100;
+}
+
+.card__info {
+	@apply grow sm:min-h-36 overflow-hidden flex flex-col sm:items-center bg-white p-2;
+}
+
+.card__title {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;  
+
+	@apply visible grow min-h-0 mb-1 overflow-hidden text-ellipsis sm:text-center font-thin sm:text-2xl;
+}
+
+.card__prices {
+	@apply flex overflow-hidden;
+}
+
+.card__deal {
+	@apply absolute px-2 top-0 left-0 w-full text-white bg-red-400 font-extrabold text-center;
+}

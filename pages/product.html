@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>products.html</title>
+	<link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+<body class="min-h-screen">
+	<main class="h-screen bg-purple-200">
+		<section id="prod-img" class="h-80 bg-gray-400">img</section>
+		<section id="container" class="h-screen bg-yellow-200">
+			<div id="billing">
+				<form action="/process.php" method="post">
+					<label for="email">Emai:</label>
+					<input type="email" name="email" id="email">
+					<label for="location">Location:</label>
+					<input type="text">
+				</form>
+			</div>
+			<div id="desc">
+				<p>This handy Leather Backpack is always ready for new adventures.</p>
+			</div>
+		</section>
+	</main>
+	<footer class="hidden relative flex h-screen md:h-96 bg-white shadow-md">
+		<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-thin">River of Goods</div>
+		<ul>
+			<li><a href="">About us</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
