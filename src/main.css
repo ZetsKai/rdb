@@ -12,6 +12,10 @@
 	}
 }
 
+.selected {
+	@apply text-blue-600;
+}
+
 #logo {
 	white-space: nowrap;
 }
@@ -21,7 +25,7 @@
 }
 
 .card__thumbnail {
-	@apply relative flex basis-32 items-center shrink-0 sm:w-full p-3 sm:p-10 bg-gray-100;
+	@apply relative flex basis-32 items-center shrink-0 w-full p-3 sm:p-10 bg-gray-100;
 }
 
 .card__info {
