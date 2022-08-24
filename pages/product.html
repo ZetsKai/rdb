@@ -8,36 +8,48 @@
 	<link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 <body class="min-h-screen">
-	<main class="h-screen bg-slate-200">
-		<section id="prod-img" class="relative flex justify-center items-center h-1/2 p-10">
-			<div class="absolute top-0 left-0 flex justify-between px-4 w-full">
-				<button id="backBtn" class="bg-orange-400">back</button>
-				<button id="cartBtn" class="bg-orange-400">cart</button>
-			</div>
+	<div class="fixed top-0 left-0 flex justify-between p-4 w-full">
+		<button id="backBtn" class="bg-orange-400">back</button>
+		<button id="cartBtn" class="bg-orange-400">cart</button>
+	</div>
+	<main class="flex h-screen bg-slate-200">
+		<section id="prod-img" class="basis-1/2 grow relative flex justify-center items-center p-10">
 			<img class="max-h-full w-auto" src="https://pluspng.com/img-png/brown-leather-wallet-png-image-1470.png" alt="" />
 		</section>
-		<section id="container" class="flex flex-col h-1/2 overflow-hidden bg-white border-b-2 border-black border-solid">
+		<section id="container" class="basis-1/2 grow flex flex-col overflow-hidden bg-white border-b-2 border-black border-solid px-4">
 			<div class="flex justify-evenly bg-white p-2 text-black font-light">
 				<button id="descBtn">Description</button>
 				<button id="billBtn" class="selected">Billing</button>
 			</div>
 			<form id="bill" class="flex flex-col grow overflow-scroll">
 				<label for="colors" class="title">Color:</label>
-				<select name="colors" id="colors" class="h-10 w-full">
+				<select name="colors" id="colors" class="rounded-none h-10 w-full">
 					<option value="white">White</option>
 					<option value="silver">Silver</option>
 					<option value="black">Black</option>
 				</select>
 				<label for="sizes" class="title">Size:</label>
-				<select name="sizes" id="sizes" class="h-10 w-full">
+				<select name="sizes" id="sizes" class="rounded-none h-10 w-full">
 					<option value="sm">SM</option>
 					<option value="md">MD</option>
 					<option value="lg">LG</option>
 					<option value="xl">XL</option>
 				</select>
 				<label for="quantity" class="title">Quantity:</label>
-				<input type="number" name="quantity" id="quantity" class="h-10 w-full">
-				<div class="buttons flex h-10">
+				<select name="quantity" id="quantity" class="rounded-none h-10 w-full">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+				<div class="text-white">penis</div>
+				<div class="buttons flex h-10 gap-4">
 					<button class="w-1/2 p-2 bg-slate-500 text-white">Add to card</button>
 					<button class="w-1/2 p-2 bg-orange-400">Buy now</button>
 				</div>

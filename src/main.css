@@ -13,7 +13,7 @@
 }
 
 .selected {
-	@apply text-blue-600;
+	@apply text-blue-600 bg-slate-400;
 }
 
 #logo {
@@ -21,7 +21,7 @@
 }
 
 .card {
-	@apply flex sm:flex-col sm:items-center min-h-36 shadow-md overflow-hidden;
+	@apply flex sm:flex-col h-36  sm:h-auto shadow-md overflow-hidden;
 }
 
 .card__thumbnail {
@@ -29,7 +29,7 @@
 }
 
 .card__info {
-	@apply grow sm:min-h-36 overflow-hidden flex flex-col sm:items-center bg-white p-2;
+	@apply grow h-full sm:h-36 overflow-hidden flex flex-col sm:items-center bg-white p-2;
 }
 
 .card__title {
@@ -37,13 +37,17 @@
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;  
 
-	@apply visible grow min-h-0 mb-1 overflow-hidden text-ellipsis sm:text-center font-thin sm:text-2xl;
+	@apply visible grow min-h-0 overflow-hidden text-ellipsis sm:text-center font-thin sm:text-2xl;
 }
 
 .card__prices {
-	@apply flex overflow-hidden;
+	@apply flex overflow-hidden mt-2;
 }
 
 .card__deal {
 	@apply absolute px-2 top-0 left-0 w-full text-white bg-red-400 font-extrabold text-center;
+}
+
+.ext {
+	min-width: 320px;
 }
