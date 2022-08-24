@@ -7,16 +7,17 @@
 	<title>products.html</title>
 	<link rel="stylesheet" href="../assets/styles/style.css">
 </head>
-<body class="min-h-screen">
-	<div class="fixed top-0 left-0 flex justify-between p-4 w-full">
+<body class="min-h-screen bg-slate-200">
+	<div class="fixed top-0 left-0 flex justify-between w-full h-10 bg-white px-4 hidden">
 		<button id="backBtn" class="bg-orange-400">back</button>
 		<button id="cartBtn" class="bg-orange-400">cart</button>
 	</div>
-	<main class="flex h-screen bg-slate-200">
-		<section id="prod-img" class="basis-1/2 grow relative flex justify-center items-center p-10">
-			<img class="max-h-full w-auto" src="https://pluspng.com/img-png/brown-leather-wallet-png-image-1470.png" alt="" />
+	<main class="flex flex-col lg:flex-row h-screen bg-slate-200 border-b-2 border-black border-solid">
+		<!-- wtf is the issue with flex basis and height -->
+		<section id="prod-img" class="basis-1/2 max-h-1/2 lg:max-h-full flex justify-center items-center">
+			<img class="max-h-full w-auto block" src="https://pluspng.com/img-png/brown-leather-wallet-png-image-1470.png" alt="" />
 		</section>
-		<section id="container" class="basis-1/2 grow flex flex-col overflow-hidden bg-white border-b-2 border-black border-solid px-4">
+		<section id="container" class="basis-1/2 max-h-1/2 lg:max-h-full flex flex-col overflow-hidden bg-white px-4">
 			<div class="flex justify-evenly bg-white p-2 text-black font-light">
 				<button id="descBtn">Description</button>
 				<button id="billBtn" class="selected">Billing</button>
@@ -50,9 +51,10 @@
 				</select>
 				<div class="text-white">penis</div>
 				<div class="buttons flex h-10 gap-4">
-					<button class="w-1/2 p-2 bg-slate-500 text-white">Add to card</button>
+					<button class="w-1/2 p-2 bg-slate-500 text-white">Add to cart</button>
 					<button class="w-1/2 p-2 bg-orange-400">Buy now</button>
 				</div>
+				<div class="text-white">penis</div>
 				<!-- <form class="bg-blue-400" action="/process.php" method="post">
 					<select name="color" id="color">
 						<option value="silver">silver</option>
