@@ -6,14 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>products.html</title>
 	<link rel="stylesheet" href="../assets/styles/style.css">
+	<script src="https://kit.fontawesome.com/335e64dc15.js" crossorigin="anonymous"></script>
 </head>
-<body class="min-h-screen bg-slate-200">
-	<div class="fixed top-0 left-0 flex justify-between w-full h-10 bg-white px-4 hidden">
-		<button id="backBtn" class="bg-orange-400">back</button>
-		<button id="cartBtn" class="bg-orange-400">cart</button>
-	</div>
+<body class="min-h-screen bg-slate-200 relative">
+	<header class="fixed top-0 left-0 w-full z-20">
+		<div class="flex justify-between h-10 bg-white px-4 border-solid border-slate-200 border-b-2">
+			<button id="backBtn" class=""><i class="fa-solid fa-arrow-left"></i></button>
+			<button id="cartBtn" class=""><i class="fa-solid fa-cart-shopping fa-sm"></i></button>
+		</div>
+		<div id="cart-menu" class="absolute bg-slate-200 top-0 h-screen w-screen lg:right-0 lg:w-96 pt-10 pb-4 -z-10 flex-col hidden">
+			<div class="basis-24 bg-white mb-4 flex items-center px-4">Balance: DEBT</div>
+			<ul class="px-4 overflow-y-scroll basis-10 grow">
+				<li class="bg-white mb-4 pr-4 h-16 flex items-center">
+					<div class="p-1 img h-full basis-16 flex items-center justify-center">
+						<img class="max-h-full w-auto block" src="https://pluspng.com/img-png/brown-leather-wallet-png-image-1470.png" alt="" />
+					</div>
+					<div class="cart-title grow px-4 basis-8 overflow-hidden text-ellipsis hidde">TARJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJETA</div>
+					<button class="basis-6 bg-red-400 h-6">X</button>
+				</li>
+			</ul>
+		</div>
+	</header>
 	<main class="pt-10 flex flex-col lg:flex-row h-screen border-b-2 border-black border-solid">
-		<section id="prod-img" class="basis-1/2 max-h-1/2 lg:max-h-full flex justify-center items-center p-10">
+		<section id="prod-img" class="basis-1/2 max-h-1/2 lg:max-h-full flex justify-center items-center p-10 bg-slate-200">
 			<img class="max-h-full w-auto block" src="https://pluspng.com/img-png/brown-leather-wallet-png-image-1470.png" alt="" />
 		</section>
 		<section id="container" class="basis-1/2 max-h-1/2 lg:max-h-full flex flex-col overflow-hidden bg-white px-4">
@@ -21,7 +36,7 @@
 				<button id="descBtn">Description</button>
 				<button id="billBtn" class="selected">Billing</button>
 			</div>
-			<form id="bill" class="flex flex-col grow overflow-scroll">
+			<form id="bill" class="flex flex-col grow overflow-y-scroll">
 				<label for="colors" class="title">Color:</label>
 				<select name="colors" id="colors" class="rounded-none h-10 w-full">
 					<option value="white">White</option>
@@ -112,9 +127,15 @@
 			switchSelected(`${show}Btn`);
 		}
 
+		function deployCart()
+		{
+			document.body.classList.toggle("deploy-cart");
+		}
+
 		descBtn.addEventListener('click', () => displayDescOrBill('#desc', '#bill'));
 		billBtn.addEventListener('click', () => displayDescOrBill('#bill', '#desc'));
 		backBtn.addEventListener('click', () => history.back());
+		cartBtn.addEventListener('click', deployCart);
 	</script>
 </body>
 </html>
