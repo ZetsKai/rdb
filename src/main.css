@@ -10,6 +10,18 @@ body.deploy-cart {
 	overflow: hidden;
 }
 
+#logo {
+	line-height: 4rem;
+}
+
+.link {
+	line-height: 4rem;;
+}
+
+#cart:hover div {
+	display: flex;
+}
+
 body.deploy-cart main {
 	@apply brightness-50;
 }
@@ -24,6 +36,9 @@ body.deploy-cart #cart-menu {
 	}
 	.max-h-1\/2 {
 		max-height: 50%;
+	}
+	.left-unset {
+		left: unset;
 	}
 }
 
